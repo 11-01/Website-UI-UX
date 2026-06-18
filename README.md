@@ -1,1 +1,174 @@
 # Website-UI-UX-
+
+# 📚 Website UI/UX 知识体系总览
+
+> 涵盖网站布局 · 导航体系 · 响应式设计 · 微交互 · 视觉风格 · B端规范 · 电商设计 · 登录首页 · 表单组件 · 导航组件 · 布局模式等41个实战演示
+
+---
+
+## 一、🖼️ 网站布局体系（4个演示）
+
+| 演示文件 | 核心知识 | 要点 |
+|---------|---------|------|
+| `index.html` | **11种网站布局** | 国字型/厂字型/框架/封面式/卡片式/分栏式/网格/单栏式/大标题/F型/Flash布局 — 每种内嵌模拟浏览器展示 |
+| `layout-patterns-demo.html` | **12种核心布局模式** | 顶部导航栏/圣杯布局/卡片网格/单列堆叠/侧边栏/分栏面板/列表-详情/仪表盘网格/英雄区/瀑布流/居中容器/图文左右 — Grid vs Flexbox 选型指南 |
+| `behavior-driven-layout.html` | **行为驱动布局** | 前端采集→后端分析→下发CSS变量→零重排响应；点击/滚动/悬停实时驱动布局变化 |
+| `responsive-design-demo.html` | **响应式设计** | Flexbox+Grid+媒体查询+vw/rpx单位；断点480→768→1024；拖拽容器边���实时观察 |
+
+**品牌调性 × 布局匹配**：极简(大标题+单栏) / B2B(国字型+F型) / 潮流(封面+Flash) / 生活方式(卡片+网格圆角) / 工具(厂字型+框架)
+
+---
+
+## 二、🧭 导航体系（10个演示）
+
+### 2.1 顶部导航
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `navbar-demo.html` | **5种响应式导航**：基础汉堡菜单 / 搜索型(focus-within) / 粘性+下拉 / 侧滑抽屉 / Vue3组件代码 |
+| `navbar-icons-demo.html` | **导航图标三方案**：Font Awesome字体图标 / `<img>`标签 / CSS `::before`背景图；7维度对比表 |
+| `sticky-nav-demo.html` | **吸顶导航5方案**：CSS sticky / JS scroll+class / IntersectionObserver / 导航放Banner内 / JS+rAF节流+动态目标 |
+| `sticky-cover-fix-demo.html` | **吸顶遮挡修复三场景**：padding-top防遮挡 / scroll-margin-top防锚点被盖 / z-index防下拉裁切 |
+| `anchor-scroll-demo.html` | **锚点跳转完全指南**：三种方案(语义化锚点 / CSS smooth scroll / JS scrollIntoView) / scroll-margin-top修复导航遮挡 / 跨页面跳转 / :target高亮 |
+| `hover-dropdown-demo.html` | **纯CSS悬停下拉菜单**：display:none vs opacity+visibility+transform；Mega Menu全宽面板；多级嵌套向右飞出 |
+| `dropdown-menu-demo.html` | **下拉菜单完全指南**：纯CSS悬停(过渡动画) / JS点击(外部关闭) / Mega Menu全宽 / :focus-within键盘无障碍 / 多级嵌套向右飞出 |
+
+### 2.2 侧边导航
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `sidebar-demo.html` | **侧边导航栏全功能**：fixed布局 / 展开收起 / 三级嵌套手风琴 / ScrollSpy滚动高亮 / 移动端抽屉+遮罩 |
+| `sidebar-animation-demo.html` | **三种展开收起动画**：width过渡(⚠重排) / translateX(✅GPU) / Grid联动；动态宽度测量 |
+| `sidebar-text-fade-demo.html` | **文字淡入淡出优化**：opacity+translateX+GPU加速+cubic-bezier；展开淡入延迟0.08s |
+
+### 2.3 导航框架
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `nav-framework-demo.html` | **五种经典框架布局**：上下/左右/T字/响应式/自适应；平台差异(macOS vs Windows)；首屏高度红线 |
+| `breadcrumb-demo.html` | **面包屑导航**：位置型/属性型/路径型三类；正确vs错误HTML结构；JSON-LD结构化数据；步骤型+折叠型变体 |
+
+### 2.4 小程序导航
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `miniprogram-tabbar-guide.html` | **小程序Tab Bar**：原生底部(2-5个)/顶部；自定义Tab Bar组件；iOS/Android边框1rpx方案；NavigationBar自定义 |
+
+---
+
+## 三、✨ 交互与反馈体系（7个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `ui-animation-demo.html` | **15种现代UI动画完全指南**：进场动画(淡入/滑入/缩放/弹性/模糊/错落/遮罩) + 交互动画(悬停抬升/涟漪/按钮加载/开关/点赞爆裂/磁吸) + 反馈动画(错误抖动/SVG对勾描绘)；性能优化(will-change/重排属性表/prefers-reduced-motion) |
+| `button-design-demo.html` | **按钮设计完全指南**：五大维度 — 视觉样式(形状/填充/尺寸/渐变霓虹3D) / 文案语义(动词+利益点/主次层级) / 布局位置(表单/固定底/居中CTA) / 交互状态(6种状态全览/微交互特效/加载→成功流转) / 测试工具(A/B测试对比/在线生成器/自查清单) |
+| `tabs-design-demo.html` | **标签页设计完全指南**：使用场景(适用/不适用对比) / 设计规范(文案≤4字/5种状态/尺寸层级) / 6种创意风格(下划线/胶囊/图标+文字/标题+副标题/异形选中态/垂直侧边) / 原生JS切换引擎 |
+| `micro-interactions-demo.html` | **微交互六大场景**：按钮(抬升/反弹/辉光/边框)/表单(Ghost Placeholder+验证)/骨架屏/真实进度条/悬停卡片/弹窗过渡 |
+| `interaction-feedback-demo.html` | **交互反馈四场景**：加载(骨架屏+品牌动效+非模态)/录入(实时校验)/成功(✓弹跳)/错误(解决方案)；Toast vs 弹窗 |
+| `ixd-principles-demo.html` | **交互设计六大原则**：可见性/反馈/限制/映射/一致性/容错性 — 每项可互动验证 |
+| `scrollytelling-demo.html` | **滚动叙事**：5章节品牌故事；背景随滚动演变；fade-in/slide-left入场动画；缓动曲线实验室 |
+
+---
+
+## 四、🎨 视觉风格与质感（3个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `ui-visual-styles-demo.html` | **七种视觉风格**：极简/扁平/暗黑赛博朋克/玻璃拟态/多彩插画/杂志排版/动态交互 — 每种风格自成Section |
+| `ui-styles-cards-demo.html` | **14种设计风格**：拟物化→扁平→Material→新拟态→玻璃→粘土→液态玻璃→新粗野主义→极简→包豪斯→复古未来→粗野主义→反设计→酸性；附九类业务卡片 |
+| `advanced-ui-techniques-demo.html` | **2026前沿技法**：彩色弥散(Aurora)/液态玻璃(鼠标光斑跟随)/特殊圆角(corner-shape)/边缘折角/内容渐隐(Fading Edge)/面积折线图/触感拟态 |
+
+---
+
+## 五、📐 B端企业级规范（1个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `b-end-specs-demo.html` | **B端设计规范全参数**：1440×900画布/64px顶导/232px侧栏/24列8px栅格/14px正文/按钮36-20px四档/输入框≤2种尺寸/1024图标画板/Bento Box弹性布局/2026趋势 |
+
+---
+
+## 六、🛒 电商与业务卡片（2个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `ecommerce-card-demo.html` | **电商卡片三场景**：高转化率(心智路径+卖点分层+CTA)/PC vs 移动端(热区44×44dp vs 22dp)/品牌调性(高端vs年轻) |
+| `system-homepage-demo.html` | **系统首页设计**：B端Dashboard(Bento Grid+KPI+快捷入口+待办)/C端内容门户(Hero+Feed流+分类导航)/四大设计原则 |
+
+---
+
+## 七、🔐 登录与首页（2个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `login-page-demo.html` | **Web登录页三种布局**：单栏卡片式/玻璃拟态悬浮/左文右表单分屏；实时校验+防重复提交+Loading状态；WCAG对比度≥4.5:1 |
+| `homepage-demo.html` | **Web首页完整设计**：3秒价值传递/导航≤5项/F型视觉动线/Hero CTA/产品大图/Feature卡片/响应式汉堡菜单 |
+
+---
+
+## 八、📋 表单组件与页面组件（9个演示）
+
+| 演示文件 | 核心知识 |
+|---------|---------|
+| `input-field-demo.html` | **输入框设计完全指南**：标签方式(顶部/浮动/占位符) / 状态反馈(默认/聚焦/成功/错误/禁用) / 变体(前后缀/搜索/可清空/多行文本) / HTML5 type移动端键盘 / XSS安全防护 |
+| `checkbox-design-demo.html` | **复选框设计完全指南**：四种方案(原生input / accent-color变色 / 完全自定义CSS / Toggle开关) / 卡片式选择 / 圆形Radio风格 / :checked伪类+对勾动画 / 无障碍(焦点+aria) |
+| `radio-button-demo.html` | **单选按钮设计完全指南**：基础HTML结构(name互斥+label关联) / 三种自定义(accent-color/CSS伪元素重绘/卡片式) / 按钮组式Radio / fieldset语义化分组 / 框架方案与服务端校验 |
+| `range-slider-demo.html` | **滑块设计完全指南**：基础滑块+JS实时数值显示 / 三浏览器伪元素兼容(webkit/moz/ms) / 进度填充效果(JS动态gradient) / 垂直滑块 / 双滑块概念 / 移动端touch-action |
+| `select-dropdown-demo.html` | **下拉选择组件完全指南**：原生select+CSS美化(自定义SVG箭头) / optgroup分组 / 完全自定义div+ul+JS下拉菜单 / JS动态生成选项 / A11y避坑(aria-expanded/ID唯一/悬停断连) / 框架方案对比 |
+| `stepper-design-demo.html` | **步骤条设计完全指南**：横向步骤条(语义化ol+Flexbox+CSS计数器) / 垂直步骤条(物流/审批场景) / 可点击跳转交互 / Element Plus/Ant Design/Bootstrap / 避坑(type=button/状态同步/无障碍) |
+| `pagination-design-demo.html` | **分页组件完全指南**：四种类型(数字分页/上下页/加载更多/无限滚动) / 省略号算法 / UI变体(标准/药丸/大号/含总数+跳转) / 状态反馈 / 语义化+a11y / LIMIT+OFFSET优化 |
+| `navigation-menu-demo.html` | **导航菜单设计指南**：7项核心原则(≤7项/雅各布定律/标签准确/视觉层级…) / 5种菜单类型(水平/侧边栏/锚点/页脚/底部Tab) / 类型选择指南 / 数据分析驱动优化 |
+| `header-design-demo.html` | **网站页头设计指南**：核心元素(Logo/导航/搜索/CTA) / 7种氛围玩法(纯色/渐变/纹理/照片/3D/动画/极简) / Sticky吸顶演示 / 技术实现(HTML语义化+Flexbox+响应式) |
+
+---
+
+## 📊 知识体系全景图
+
+```
+                    Website UI/UX 知识体系
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+   🖼️ 布局体系         🧭 导航体系        ✨ 交互体系
+   ├─11种布局          ├─顶部导航(5)      ├─按钮设计
+   ├─行为驱动           ├─侧边导航(3)      ├─标签页设计
+   ├─响应式设计         ├─导航框架(2)      ├─微交互
+   └─品牌匹配           ├─面包屑           ├─反馈场景
+                        ├─锚点跳转         ├─IxD六原则
+                        ├─下拉菜单         └─滚动叙事
+                        ├─导航菜单
+                        ├─页头设计
+                        └─小程序TabBar
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+   🎨 视觉风格          📐 B端规范         🛒 业务场景
+   ├─7种风格            ├─画布/栅格        ├─电商卡片
+   ├─14种风格+卡片       ├─字体/组件        ├─系统首页
+   ├─2026前沿技法        └─Bento Box        ├─登录页
+   └─微交互质感                            └─首页设计
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                    📋 表单与页面组件
+                    ├─输入框设计
+                    ├─复选框设计
+                    ├─单选按钮设计
+                    ├─滑块设计
+                    ├─下拉选择设计
+                    ├─步骤条设计
+                    └─分页组件设计
+```
+
+---
+
+## 🎯 学习路径建议
+
+1. **入门**：`index.html`(布局) → `responsive-design-demo.html`(响应式) → `nav-framework-demo.html`(框架)
+2. **导航**：`navigation-menu-demo.html`(导航菜单) → `header-design-demo.html`(页头) → `navbar-demo.html` → `sticky-nav-demo.html` → `dropdown-menu-demo.html` → `anchor-scroll-demo.html` → `sidebar-demo.html` → `breadcrumb-demo.html`
+3. **交互**：`button-design-demo.html`(按钮) → `input-field-demo.html`(输入框) → `checkbox-design-demo.html`(复选框) → `tabs-design-demo.html`(标签页) → `stepper-design-demo.html`(步骤条) → `pagination-design-demo.html`(分页) → `ixd-principles-demo.html` → `micro-interactions-demo.html`
+4. **视觉**：`ui-visual-styles-demo.html` → `ui-styles-cards-demo.html` → `advanced-ui-techniques-demo.html`
+5. **实战**：`b-end-specs-demo.html` → `ecommerce-card-demo.html` → `login-page-demo.html` → `homepage-demo.html`
+6. **进阶**：`behavior-driven-layout.html` → `scrollytelling-demo.html` → `system-homepage-demo.html`
+
+---
+
+*总计：41个交互演示页面 · 覆盖网站UI/UX全链路 · 2026年6月*
